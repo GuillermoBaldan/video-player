@@ -17,29 +17,7 @@
             <video id="video" poster="./images/poster.jpg" controls muted src="./videos/Rocket.mp4" width="400"></video>
         </div>
     </div>
-   <script>
-        const $video = document.querySelector("#video")
-        const $play = document.querySelector("#play")
-        const $pause = document.querySelector("#pause")
-
-        $play.addEventListener('click', handlePlay )
-        $pause.addEventListener('click', handlePause)
-
-
-        function handlePlay(){
-            $video.play()
-            $play.hidden = true;
-            $pause.hidden = false;
-            console.log('le diste click al botón de play')
-        }
-        
-        function handlePause(){
-            $video.pause()
-            $play.hidden = false;
-            $pause.hidden = true;
-            console.log('le diste click al botón de pause')
-        }
-    </script>
+   <script src="./js/index.js"></script>
 
 </body>
 </html>
