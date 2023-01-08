@@ -8,14 +8,16 @@
     <title>Video Player</title>
 </head>
 <body>
-    <h1>Hola mundo!</h1>
-    <button class="button" id="backward"></button>
-    <button class="button" id="forward"></button>
-    <button class="button" id="play"></button>
-    <button class="button" hidden id="pause"></button>
-    <button class="button">avanzar 10 segundos</button>
-    <video id="video" poster="./images/poster.jpg" controls muted src="./videos/Rocket.mp4" width="400"></video>
-    <script>
+    <div class="wrapper">
+        <div class="player">
+            <button class="button" id="backward" aria-label="retroceder 10 segundos" title="retroceder 10 segundos"></button>
+            <button class="button" id="forward" aria-label="adelantar 10 segundos" title="adelantarse 10 segundos"></button>
+            <button class="button" id="play" aria-label="play" title="play"></button>
+            <button class="button" hidden id="pause" aria-label="pause" title="play"></button>
+            <video id="video" poster="./images/poster.jpg" controls muted src="./videos/Rocket.mp4" width="400"></video>
+        </div>
+    </div>
+   <script>
         const $video = document.querySelector("#video")
         const $play = document.querySelector("#play")
         const $pause = document.querySelector("#pause")
