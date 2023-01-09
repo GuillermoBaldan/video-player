@@ -9,8 +9,8 @@ const $progress = document.querySelector('#progress')
 $play.addEventListener('click', handlePlay )
 $pause.addEventListener('click', handlePause)
 $video.addEventListener('loadedmetadata', handleLoaded)
-$progress.addEventListener('click', clickDetection)
-
+$video.addEventListener('timeupdate', handleTimeUpdate)
+$progress.addEventListener('input', handleInput)
 
 
 function handlePlay(){
@@ -48,6 +48,10 @@ function handleLoaded(){
     console.log("Ha cargado mi video")
 }
 
-function clickDetection(){
-    console.log("Has hecho click en la barra de progreso")
+function handleTimeUpdate(){
+    $progress.value = $video.currentTime;
+}
+
+function handleInput(){
+    $video.currentTime = $progress.value;
 }
